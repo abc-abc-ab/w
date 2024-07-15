@@ -1,4 +1,4 @@
-# about `w`
+# about the `w`
 ### there projects are my peojects.
 $3^2+\sqrt{25}=14$
 
