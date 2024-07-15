@@ -1,0 +1,73 @@
+.money
+{
+
+    display: flex;
+    width: 55vmax;
+    height: 180px;
+    background-color: #ffffff;
+    border-color: #000000;
+    border-width: 3px;
+    border-style: inset;
+    border-radius: 30px;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+
+.noSel
+{
+
+    user-select: none;
+
+}
+
+#monetary, .yen
+{
+
+    font-weight: bold;
+    font-size: 40px;
+    white-space: nowrap;
+
+}
+
+#textI
+{
+
+    display: none;
+
+}
+
+img:not(#logo)
+{
+
+    display: flex;
+    
+    border-color: #000000;
+    border-style: inset;
+    border-width: 3px;
+    border-radius: 25px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    width: 90%;
+
+}
+
+span.eye.click:not(#logo)
+{
+
+    background-position: 0 0;
+
+}
+
+span.eye:not(#logo)
+{
+    display: inline-block;
+    background-image: url(./eye.jpg);
+    background-position: -33.5px 0;
+    background-size: 80px 80px;
+    width: 40px;height: 40px;
+    transition: none;
+}

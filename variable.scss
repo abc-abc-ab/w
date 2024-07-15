@@ -1,0 +1,29 @@
+:root{
+    @media (prefers-color-scheme: dark)
+    {--tx-c: #ffffff;
+        --b-c: #454545;
+        --hd-c: #3ea8c5;
+        --ft-c: #cbcbcb;
+        --sb-c: #008273;
+        --s-c: #87fff1;
+        --tr-c: #6f6f00;}
+    @media (prefers-color-scheme: light)
+    {--tx-c: #000000;
+        --b-c: #e4e4e4;
+        --hd-c: #ffffff;
+        --ft-c: #707070;
+        --sb-c: #00e4c9;
+        --s-c: #54a198;
+        --tr-c: #ffff00;}
+}
+$text-color: var(--tx-c,#000);
+$background-color: var(--b-c, #e4e4e4);
+$header-color: var(--hd-c, #fff);
+$footer-color: var(--ft-c, #707070);
+$selection-background-color: var(--sb-c, #00e4c9);
+$selection-color: var(--s-c, #54a198);
+$target-color: var(--tr-c, #ff0);
+// -------------------------------------------------- //
+$anchor-color: var(--anchor-color, #00c3ff);
+$anchor-hover: var(--anchor-hover, #ffa500);
+$line-color: var(--line-color, #8c00ff);

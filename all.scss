@@ -1,0 +1,545 @@
+@charset "UTF-8";
+@use "./Menu.css";
+@use "./woff.css";
+@use "./variable.scss" as scss;
+
+@function rem($px){
+    @return calc(($px / 16px) * 1rem)
+}
+
+head, head *, title, meta, link, script, style
+{
+    display: none;
+    /* display: block; */
+    /* min-height: 15px; */ 
+    --上の2つを-: "やってみて";
+    --try-the-: "above-two";
+}
+
+*, ::before, ::after
+{
+
+    box-sizing: border-box;
+
+}
+
+:root
+{
+
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    --anchor-color: #00c3ff;
+    --anchor-hover: #ffa500;
+    --line-color: #8c00ff;
+
+}
+:root, body
+{
+    min-height: 100vh;
+    min-width: 100%;
+    width: 100%;
+}
+
+html
+{-webkit-locale: "ja";
+direction: ltr;
+unicode-bidi: embed;
+/* unicode-bidi: initial; */}
+
+*
+{
+    transition: color .3s, background .3s;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+*::selection
+{background-color: scss.$selection-background-color;
+color: scss.$selection-color}
+*:target
+{background-color: scss.$target-color;
+color: scss.$selection-color}
+body
+{
+    margin: 0px;
+    display: flex;
+    flex-direction: column; flex-wrap: wrap;/* flex-flow */
+    overflow-x: hidden; overflow-y: scroll; /* overflow(x | y)*/
+    background-color: scss.$background-color
+    
+}
+html[lang=ja] *{font-family: "Yu Gothic", "YuGothic",
+    "Hiragino Kaku Gothic ProN", "Meirio",
+    "Verdana", serif;}
+html[lang=en] *{font-family: "Yu Gothic", "YuGothic",
+    "Meirio", "Verdana", serif;}
+
+main
+{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 103px;
+    flex-grow: 1;
+
+}
+
+noscript
+{
+
+    font-size: rem(50px);
+    color: scss.$line-color;
+
+}
+
+p, bigger, li
+{
+
+    margin: 0;
+    color: scss.$text-color
+
+}
+
+          /*
+         /  /
+         /  /
+        /    /
+        /    /
+       /      /
+       /      /
+      /        /
+      /********`/
+     /          /
+     /          /
+    /            /
+    /            /
+   /              /
+   /              /
+  /                /
+  /                /
+/                  */
+
+/* Anchor_tag */
+a[href]
+{
+
+    /* cursor: alias; */
+    cursor: default;
+    color: scss.$anchor-color;
+    text-decoration: none;
+    transition: background .2s,
+    color .2s;
+    
+}
+
+a[href]:hover, a[href]:focus
+{
+
+    color: scss.$anchor-hover
+
+}
+
+a[href].button, [lang] button.button
+{
+
+    border: none;
+    border-radius: 5px;
+    background-color: scss.$anchor-color;
+    color: #fff;
+    padding: 3px;
+    height: 25.6px;
+    
+
+}
+a[href].button:hover, [lang] button.button:hover,
+a[href].button:focus, [lang] button.button:focus
+{
+
+    background-color: scss.$anchor-hover
+
+}
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+
+[lang] button:not(.button)
+{
+
+    border: none;
+    border-radius: 5px;
+    background-color: scss.$header-color;
+    color: scss.$line-color;
+    padding: 3px;
+    height: 25.6px;
+
+}[lang] button:not(.button):hover,
+[lang] button:not(.button):focus
+{
+
+    background-color: scss.$footer-color
+
+}
+
+/****************************************`/
+/                                         /
+/                                         /
+/                                         /
+/                                         /
+/                                         /
+/                                         /
+/                                         /
+/****************************************`/
+                    /
+                    /
+                    /
+                    /
+                    /
+                    /
+           /*******************/
+/* Responsive */
+@media screen and ( max-width: 476px )
+{/*スマホ向け*/
+
+    bigger{font-size: 9vw;}
+    .BreadCrumb_list ol 
+    {margin: 16px 0 16px -20vw;
+    padding: 0;}
+    div.nav.sp{display: flex; flex-flow: row wrap}
+    div.menu.pc{display: none;}
+
+
+    .smart_phone{display: block;}
+
+}
+@media screen and ( min-width: 477px ) and ( max-width: 769px )
+{/*タブレット向け*/
+
+    bigger{font-size: 7vw;}
+    div.nav.sp{display: flex; flex-flow: row wrap}
+    div.menu.pc{display: none;}
+
+
+    .tablet{display: block;}
+
+}/* 上記以外 | PC向け | */
+div.nav{display: none;}
+div.menu{display: block;}
+
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+
+.left
+{
+
+   float: none;
+   margin: auto auto auto 10px;
+
+}
+
+.center
+{
+
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.right
+{
+
+   float: none;
+   margin: auto 10px auto auto;
+
+}
+
+/*                             /
+/                              /
+/                              /
+/                              /
+/                              /
+/                              /
+/                              /
+/*****************************`/
+/                              /
+/                              /
+/                              /
+/                              /
+/                              /
+/                              /
+/　　　　　　　　　　　　　　　/
+/                              /
+/                              /
+/                             */
+
+/* Header */
+#head
+{
+
+    background-color: scss.$header-color;
+    max-width: 100%;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    position: fixed;
+    z-index: 100;
+    flex-flow: row nowrap;
+
+}
+
+#logo
+{
+
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
+}
+
+div.pc, div.pc>ul
+{
+
+    display: flex;
+    padding: 0;
+
+}
+
+div.pc>ul li
+{
+
+    margin: 10px;
+
+}
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+
+/*****************************
+/
+/
+/
+/
+/
+/
+/*****************************
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+
+/* Footer */
+#foot
+{
+
+    background-color: scss.$footer-color;
+    min-width: 100%;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+
+}
+#footer
+{
+
+    flex-grow: 1;
+    min-height: 94.4px;
+    height: 94.4px;
+    max-height: 94.4px;
+
+}
+#CompanyName
+{
+
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    >small
+    {margin-left: auto;
+     margin-right: auto;}
+
+}
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+/* End */
+
+
+.BreadCrumb_list
+{
+
+    display: flex;
+    width: 100%;
+    & * {
+    margin: 0;
+    }
+}
+
+.ol
+{
+
+    padding-left: 10px;
+    display: flex;
+
+}
+
+.next::after
+{
+
+    content: ">";
+    color: scss.$footer-color
+
+}
+
+ul, ol
+{
+
+    margin-left: 80px;
+    &:not([disc],[decimal]) > li{
+        list-style-type: none;
+    }
+
+}
+
+bigger
+{
+
+    font-size:  rem(65px);
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+
+}
+
+html[lang] body .RomaNum
+{
+
+    font-family: system-ui;
+
+}
+
+#video
+{
+
+    position: fixed;
+    bottom: 20vmin;
+    right: 0;
+
+}
+
+pre
+{
+
+    position: relative;
+    &::before
+    {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+}
+
+label:not(#Space)
+{
+
+    white-space: pre-line;
+
+}

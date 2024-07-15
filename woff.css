@@ -1,0 +1,15 @@
+@font-face
+{
+
+    font-family: "marui";
+    font-weight: 1;
+    src: url(./woff/fonts.woff) format("woff");
+
+}
+.fonts.marui
+{
+
+    font-family: "marui", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Meirio",
+    "Verdana", serif;
+
+}

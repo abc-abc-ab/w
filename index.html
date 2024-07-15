@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="こちらは、Haruma Co., Ltd. のホームページです。">
+    <meta property="og:title" content="トップページ">
+    <meta property="og:description" content="こちらは、Haruma Co., Ltd. のホームページです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="192.168.0.108:5500/index.html">
+    <meta property="og:image" content="192.168.0.108:5500/image.png"> <!-- 固定 -->
+    <meta property="og:site_name" content="Haruma Co., Ltd."> <!-- 固定 -->
+    <meta property="og:locale" content="ja_JP"> <!-- 固定 -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- 固定 -->
+    <title>トップページ | Haruma Co., Ltd.</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="/all.css">
+    <script src="/header.js" defer></script>
+    <script src="/footer.js" defer></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <noscript>&lt;You Don't use javascript.&gt;</noscript>
+    <noscript><script src="/header.js" defer></script>
+    <script src="/footer.js" defer></script></noscript>
+
+    <header id="head"></header>
+    <main>
+        <nav class="BreadCrumb_list">
+            <p class="now_place">【現在位置】</p>
+            <ol class="ol">
+                <li>トップページ</li>
+            </ol>
+        </nav>
+
+        <div class="money center">
+            <span class="noSel">現在 - 貯金残高</span>
+            <span><span class="yen noSel">&#xa5;</span><span id="monetary">0</span>
+            <a href="javascript:document.getElementsByClassName('eye')[0].classList.toggle('click')"><span class="eye"></span></a>
+            <span id="textI">残高が更新されました - <a href="javascript:window.location.reload(true)" class="button">再起動</a></span>
+        </div>
+        <img src="./Image.png" class="center" style="width: 606px;height: 239px;">
+    </main>
+    <footer id="foot"></footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* チェックボックスを非表示にする */
+.hidden {display: none;}
+/* ハンバーガーアイコンの設置スペース */
+.open {display: flex;height: 60px;width: 60px;justify-content: center;align-items: center;position: relative;z-index: 100;
+/* 重なり順を一番上にする */}
+/* ハンバーガーメニューのアイコン */
+.open span,.open span::before,.open span::after {content: '';display: block;height: 3px;width: 25px;
+  border-radius: 3px;background: #333;transition: 0.5s;position: absolute;}/* 三本線の一番上の棒の位置調整 */
+.open span::before {bottom: 8px;}
+/* 三本線の一番下の棒の位置調整 */
+.open span::after {top: 8px;}
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#Input:checked ~ .open span {background: #ffffff00;}
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#Input:checked ~ .open span::before {bottom: 0;transform: rotate(45deg);}
+#Input:checked ~.open span::after {top: 0;transform: rotate(135deg);}
+/* メニューのデザイン*/
+.nav_content {position: fixed;  top: -200px;  right: 75px; opacity: 0;z-index: -1;
+  /* メニューを画面の外に飛ばす *//******/
+z-index: 99;transition: 0.5s;}
+/* アイコンがクリックされたらメニューを表示 */
+.nav_content{background-color: #ffffff;width:100vw;}
+#Input:checked ~ .nav_content {top: 100px;/******/
+  /* メニューを画面に入れる */ opacity: 1;}
