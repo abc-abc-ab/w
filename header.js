@@ -6,7 +6,7 @@
         `<div style="display:block;position:static;" id="first"></div>`
     );
     document.getElementById("head").insertAdjacentHTML("afterbegin", 
-        `<a href="/index.html?from=icon"><img src="/favicon.ico" id="logo"></a>`+
+        `<a href="/w/index.html?from=icon"><img src="/w/favicon.ico" id="logo"></a>`+
         // pcメニュー
         `<div class="menu pc">`+
         `<ul>`+
