@@ -66,8 +66,8 @@ window.onload = () => {
 let a = cr => {
     scr = cr("script");
     scr2 = cr("script");
-    scr.src = "/convert.js";
-    scr2.src = "/maru.min.js";
+    scr.src = "/w/convert.js";
+    scr2.src = "/w/maru.min.js";
     d.querySelector("script[src='./index.js']")
     .insertAdjacentElement("beforebegin", scr)
     d.querySelector("script[src='./index.js']")
