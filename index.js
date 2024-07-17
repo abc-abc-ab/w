@@ -60,7 +60,6 @@ window.onload = () => {
     },3000)
 }
 /**
- * 
  * @param {Function} cr 
  */
 let a = cr => {
