@@ -7,7 +7,7 @@
   let arr = [2, 3, 5, 7, 11, 13, 17, 19];
   console.log(Push(num, arr))
 
-  function Push(x, Arg){
-    return Arg.push(x)
+  function Push(x, arg){
+    return arg.push(x)
   }
 ```
