@@ -10,7 +10,6 @@
         // pcメニュー
         `<div class="menu pc">`+
         `<ul>`+
-        `<li><a class="button" href="/w/blog/">ブログ</a></li>`+
         `<li><a class="button" href="/w/morse/">モールス信号</a></li>`+
         `<li><a class="button" href="/w/codepen/">CodePen集</a></li>`+
         `<li><a class="button" href="/w/canvas/">Canvas</a></li>`+
@@ -24,7 +23,6 @@
         `<label for="Input" class="open"><span></span></label>`+
         `<nav class="nav_content"><ul class="nav_list">`+
             // 中身
-            `<li class="nav_item"><a href="/w/blog/">ブログ</a></li>`+
             `<li class="nav_item"><a href="/w/morse/">モールス信号</a></li>`+
             `<li class="nav_item"><a href="/w/codepen/">CodePen集</a></li>`+
             `<li class="nav_item"><a href="/w/canvas/">Canvas</a></li>`+
