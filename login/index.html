@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="こちらは、Haruma Co., Ltd. のログインページです。">
+    <meta property="og:title" content="ログイン">
+    <meta property="og:description" content="こちらは、Haruma Co., Ltd. のログインページです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="abc-abc-ab.github.io/w/login/index.html">
+    <meta property="og:image" content="abc-abc-ab.github.io/w/image.png"> <!-- 固定 -->
+    <meta property="og:site_name" content="Haruma Co., Ltd."> <!-- 固定 -->
+    <meta property="og:locale" content="ja_JP"> <!-- 固定 -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- 固定 -->
+    <title>ログイン | Haruma Co., Ltd.</title>
+    <script src="https://www.recaptcha.net/recaptcha/enterprise.js" async defer></script>
+    <link rel="stylesheet" href="/all.css">
+    <script src="/header.js" defer></script>
+    <script src="/footer.js" defer></script>
+    <script src="/js/dexie.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <noscript>&lt;You Don't use javascript.&gt;</noscript>
+    <noscript><script src="/header.js" defer></script>
+    <script src="/footer.js" defer></script></noscript>
+
+    <header id="head"></header>
+    <main>
+        <nav class="BreadCrumb_list">
+            <p class="now_place">【現在位置】</p>
+            <ol class="ol">
+                <li class="next"><a href="/index.html">トップページ</a></li>
+                <li>ログイン</li>
+            </ol>
+        </nav>
+
+        <form id="login">
+            <input type="text" autocomplete="username" placeholder="Name" name="name">
+            <input type="password" autocomplete="current-password" placeholder="Password" name="password">
+            <!--<div class="g-recaptcha" data-sitekey="6LcT5tMpAAAAACJT5LDiJbdJYRN3oiAySTGdMB3R" data-action="LOGIN"></div>
+            <br/>-->
+            <a href="javascript:Submit(id('login'),'/','POST')" class="button">Submit</a>
+        </form>
+        
+    </main>
+    <footer id="foot"></footer>
+    <style>
+        form{display: flex; flex-direction: column; width: 55%; align-items: center;
+            margin-left: auto; margin-right: auto; margin-top: 30px;
+            *{margin: 5px; display: inline-flex;}}
+    </style>
+    <script>
+        /**@type {dexie} db  */
+        let db = new Dexie("DataBase")
+        db.version(2).stores({
+            account: `
+            ++id,
+            LstName,
+            FstName
+            `
+        });
+        db.account.bulkPut([
+            {id:1, LstName: "Yamada", FstName: "Tarou"},
+            {id:2, LstName: "Saitou", FstName: "Kotone"}
+        ])
+        db.close()
+
+        // (async () => {await console.log(grecaptcha.enterprise.execute('6LcT5tMpAAAAACJT5LDiJbdJYRN3oiAySTGdMB3R', {action: 'LOGIN'}))})()
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6LcT5tMpAAAAACJT5LDiJbdJYRN3oiAySTGdMB3R', {action: 'LOGIN'});
+            console.info(token)
+          });
+        }
+    </script>
+</body>
+</html>

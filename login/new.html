@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: https://ogp.me/ns#">
+    <meta http-equiv="origin-trial" 
+    content="44GK44GE44CB56yR44GI44KL">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="こちらは、Haruma Co., Ltd. のアカウント登録ページです。">
+    <meta property="og:title" content="アカウント登録">
+    <meta property="og:description" content="こちらは、Haruma Co., Ltd. のアカウント登録ページです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="abc-abc-ab.github.io/w/login/new.html">
+    <meta property="og:image" content="abc-abc-ab.github.io/w/image.png"> <!-- 固定 -->
+    <meta property="og:site_name" content="Haruma Co., Ltd."> <!-- 固定 -->
+    <meta property="og:locale" content="ja_JP"> <!-- 固定 -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- 固定 -->
+    <title>アカウント登録 | Haruma Co., Ltd.</title>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="/all.css">
+    <script src="/header.js" defer></script>
+    <script src="/footer.js" defer></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <noscript>&lt;You Don't use javascript.&gt;</noscript>
+    <noscript><script src="/header.js" defer></script>
+    <script src="/footer.js" defer></script></noscript>
+
+    <header id="head"></header>
+    <main>
+        <nav class="BreadCrumb_list">
+            <p class="now_place">【現在位置】</p>
+            <ol class="ol">
+                <li class="next"><a href="/index.html">トップページ</a></li>
+                <li class="next"><a href="./index.html">ログイン</a></li>
+                <li>新しいアカウント</li>
+            </ol>
+        </nav>
+
+        <form action="./index.html" method="POST">
+            <label>Last Name
+                <input type="text" autocomplete="family-name" placeholder="LastName" name="LstName"></label>
+            <label>First Name
+            <input type="text" autocomplete="given-name" placeholder="FirstName" name="FstName"></label>
+            <label>User Name
+            <input type="text" autocomplete="username" placeholder="UserName" name="name"></label>
+            <span><label>Birth day
+                <input type="number" autocomplete="bday-year" placeholder="Year" min="1800" name="year"></label><label>&nbsp;/&nbsp;
+                <input type="number" autocomplete="bday-month" placeholder="Month" min="1" max="12" name="month"></label><label>&nbsp;/&nbsp;
+                <input type="number" autocomplete="bday-day" placeholder="Day" min="1" max="12" name="day"></label>
+            </span>
+            <label>E Mail
+            <input type="email" autocomplete="email" placeholder="EMail" name="eMail"></label>
+            <label>Password
+            <input type="password" autocomplete="new-password" placeholder="Password" name="password"></label>
+            <label>Password( Confirm )
+            <input type="password" autocomplete="new-password" placeholder="Password-Confirm" name="password"></label>
+            <!--[if gt IE 8]><div class="g-recaptcha" data-sitekey="6LcT5tMpAAAAACJT5LDiJbdJYRN3oiAySTGdMB3R" data-action="SIGNUP"></div>
+            <br/><![endif]-->
+            <!--[if lte IE 8]><!--><a href="data:text/html,%3Cp%3E%3E/p%3C"></a><!--<![endif]-->
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer id="foot"></footer>
+    <script type="text/javascript" src="type.js">
+    </script>
+    <style>
+        form{display: flex; flex-direction: column; width: 55%; align-items: center;
+            margin-left: auto; margin-right: auto; margin-top: 30px;
+            *{margin: 5px; display: inline-flex;}}
+        span > label, span{
+        display: inline-flex;align-items: center;}
+    </style>
+    <script defer>
+        $("input[name=year]")[0]
+    </script>
+</body>
+</html>
