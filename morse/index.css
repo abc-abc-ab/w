@@ -1,8 +1,9 @@
 div.circle
 {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    --r: 100px;
+    width: var(--r);
+    height: var(--r);
+    border-radius: 50%;
     background-color: #10a0ff;
     
 }
